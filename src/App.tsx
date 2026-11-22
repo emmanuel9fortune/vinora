@@ -2,6 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Inventory from "./pages/inventory/Inventory";
+import Products from "./pages/inventory/Products";
+import Batches from "./pages/inventory/Batches";
+import StockMovements from "./pages/inventory/StockMovements";
+import StockAdjustments from "./pages/inventory/StockAdjustments";
+import ExpiryManagement from "./pages/inventory/ExpiryManagement";
 
 // function ModulePage({ title, description }) {
 function ModulePage({ title, description }: { title: string; description: string }) {
@@ -31,45 +36,21 @@ function App() {
 
           <Route path="inventory" element={<Inventory />} />
 
-          <Route
-            path="inventory/products"
-            element={
-              <ModulePage
-                title="Products"
-                description="Manage your product catalogue, pricing and stock information."
-              />
-            }
-          />
+          <Route path="inventory/products" element={<Products />} />
 
-          <Route
-            path="inventory/batches"
-            element={
-              <ModulePage
-                title="Stock Batches"
-                description="Track batch numbers, quantities, purchase costs and expiry dates."
-              />
-            }
-          />
+          <Route path="inventory/batches" element={<Batches />} />
 
           <Route
             path="inventory/movements"
-            element={
-              <ModulePage
-                title="Stock Movements"
-                description="Review the complete history of stock entering and leaving your organisation."
-              />
-            }
+            element={<StockMovements />}
           />
 
           <Route
-            path="inventory/expiry"
-            element={
-              <ModulePage
-                title="Expiry Management"
-                description="Monitor expired products and products approaching their expiry dates."
-              />
-            }
+            path="inventory/adjustments"
+            element={<StockAdjustments />}
           />
+
+          <Route path="inventory/expiry" element={<ExpiryManagement />} />
 
           <Route
             path="inventory/categories"
@@ -80,27 +61,6 @@ function App() {
               />
             }
           />
-
-          <Route
-            path="inventory/adjustments"
-            element={
-              <ModulePage
-                title="Stock Adjustments"
-                description="Record damaged, missing, expired and corrected stock."
-              />
-            }
-          />
-
-          <Route
-            path="inventory"
-            element={
-              <ModulePage
-                title="Inventory"
-                description="Manage products, batches, stock levels and stock movements."
-              />
-            }
-          />
-
 
           <Route
             path="pos"

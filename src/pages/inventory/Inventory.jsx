@@ -176,6 +176,7 @@ export default function Inventory() {
         />
       </div>
 
+      
       <div className="inventory-shortcuts">
         <Link to="/inventory/products" className="inventory-shortcut">
           <div className="shortcut-icon blue">
@@ -210,17 +211,40 @@ export default function Inventory() {
           <ChevronRight size={17} />
         </Link>
 
+        <Link to="/inventory/adjustments" className="inventory-shortcut">
+          <div className="shortcut-icon orange">
+            <ClipboardList size={19} />
+          </div>
+          <div>
+            <strong>Stock adjustments</strong>
+            <span>Record and review stock discrepancies</span>
+          </div>
+          <ChevronRight size={17} />
+        </Link>
+
         <Link to="/inventory/expiry" className="inventory-shortcut">
           <div className="shortcut-icon orange">
             <CalendarClock size={19} />
           </div>
           <div>
             <strong>Expiry management</strong>
-            <span>Monitor products nearing expiry</span>
+            <span>Monitor expired and expiring stock</span>
+          </div>
+          <ChevronRight size={17} />
+        </Link>
+
+        <Link to="/inventory/categories" className="inventory-shortcut">
+          <div className="shortcut-icon blue">
+            <ClipboardList size={19} />
+          </div>
+          <div>
+            <strong>Product categories</strong>
+            <span>Organise your product catalogue</span>
           </div>
           <ChevronRight size={17} />
         </Link>
       </div>
+
 
       <section className="inventory-panel">
         <div className="inventory-panel-heading">
