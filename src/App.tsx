@@ -7,6 +7,18 @@ import Batches from "./pages/inventory/Batches";
 import StockMovements from "./pages/inventory/StockMovements";
 import StockAdjustments from "./pages/inventory/StockAdjustments";
 import ExpiryManagement from "./pages/inventory/ExpiryManagement";
+import Categories from "./pages/inventory/Categories";
+import Purchases from "./pages/purchases/Purchases";
+import PurchaseOrders from "./pages/purchases/PurchaseOrders";
+import GoodsReceived from "./pages/purchases/GoodsReceived";
+import SupplierInvoices from "./pages/purchases/SupplierInvoices";
+import SupplierPayments from "./pages/purchases/SupplierPayments";
+import PurchaseReturns from "./pages/purchases/PurchaseReturns";
+import Suppliers from "./pages/suppliers/Suppliers";
+import SupplierDetails from "./pages/suppliers/SupplierDetails";
+import Customers from "./pages/customers/Customers";
+import CustomerDetails from "./pages/customers/CustomerDetails";
+import CustomerPayments from "./pages/customers/CustomerPayments";
 
 // function ModulePage({ title, description }) {
 function ModulePage({ title, description }: { title: string; description: string }) {
@@ -34,33 +46,14 @@ function App() {
         <Route path="/" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
 
+          {/* INVENTORY */}
           <Route path="inventory" element={<Inventory />} />
-
           <Route path="inventory/products" element={<Products />} />
-
           <Route path="inventory/batches" element={<Batches />} />
-
-          <Route
-            path="inventory/movements"
-            element={<StockMovements />}
-          />
-
-          <Route
-            path="inventory/adjustments"
-            element={<StockAdjustments />}
-          />
-
-          <Route path="inventory/expiry" element={<ExpiryManagement />} />
-
-          <Route
-            path="inventory/categories"
-            element={
-              <ModulePage
-                title="Product Categories"
-                description="Organise and manage your product categories."
-              />
-            }
-          />
+          <Route  path="inventory/movements"  element={<StockMovements />}/>
+          <Route path="inventory/adjustments" element={<StockAdjustments />}/>
+          <Route path="inventory/expiry" element={<ExpiryManagement />} />          
+          <Route path="inventory/categories" element={<Categories />} />
 
           <Route
             path="pos"
@@ -72,35 +65,22 @@ function App() {
             }
           />
 
-          <Route
-            path="purchases"
-            element={
-              <ModulePage
-                title="Purchasing"
-                description="Manage purchase orders, goods received and supplier invoices."
-              />
-            }
-          />
+          {/* PURCHASES */}
+          <Route path="purchases" element={<Purchases />} />
+          <Route path="purchases/orders" element={<PurchaseOrders />} />
+          <Route path="purchases/goods-received" element={<GoodsReceived />} />
+          <Route path="purchases/invoices" element={<SupplierInvoices />} />
+          <Route path="purchases/payments" element={<SupplierPayments />} />
+          <Route path="purchases/returns" element={<PurchaseReturns />} />
 
-          <Route
-            path="suppliers"
-            element={
-              <ModulePage
-                title="Suppliers"
-                description="Manage supplier information, balances and payments."
-              />
-            }
-          />
+          {/* SUPPLIERS */}
+          <Route path="suppliers" element={<Suppliers />} />
+          <Route path="suppliers/:id" element={<SupplierDetails />} />
 
-          <Route
-            path="customers"
-            element={
-              <ModulePage
-                title="Customers"
-                description="Manage customer profiles, transactions and credit balances."
-              />
-            }
-          />
+          {/* CUSTOMERS */}
+          <Route path="customers" element={<Customers />} />
+          <Route path="customers/:id" element={<CustomerDetails />} />
+          <Route path="customers/payments" element={<CustomerPayments />} />
 
           <Route
             path="finance"
