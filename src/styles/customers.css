@@ -3096,3 +3096,1510 @@
     width: 100%;
   }
 }
+
+
+.customer-credit-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  color: var(--inventory-text);
+  min-width: 0;
+}
+
+.customer-credit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.customer-credit-breadcrumb {
+  color: var(--inventory-muted);
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+
+.customer-credit-breadcrumb span {
+  margin: 0 7px;
+}
+
+.customer-credit-header h1 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.customer-credit-header p {
+  color: var(--inventory-muted);
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.customer-credit-primary-button,
+.customer-credit-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 9px;
+  padding: 11px 15px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.18s ease;
+  white-space: nowrap;
+}
+
+.customer-credit-primary-button {
+  color: #fff;
+  background: #13865c;
+  border: 1px solid #13865c;
+}
+
+.customer-credit-primary-button:hover {
+  background: #0f704c;
+  border-color: #0f704c;
+}
+
+.customer-credit-secondary-button {
+  color: var(--inventory-text);
+  background: var(--inventory-card);
+  border: 1px solid var(--inventory-border);
+}
+
+.customer-credit-secondary-button:hover {
+  background: var(--inventory-hover);
+}
+
+.customer-credit-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.customer-credit-stat-card {
+  background: var(--inventory-card);
+  border: 1px solid var(--inventory-border);
+  border-radius: 13px;
+  padding: 18px;
+  min-width: 0;
+}
+
+.customer-credit-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--inventory-muted);
+  font-size: 12px;
+}
+
+.customer-credit-stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.customer-credit-stat-icon.green {
+  background: var(--inventory-green-bg);
+  color: var(--inventory-green-text);
+}
+
+.customer-credit-stat-icon.blue {
+  background: var(--inventory-blue-bg);
+  color: var(--inventory-blue-text);
+}
+
+.customer-credit-stat-icon.orange {
+  background: var(--inventory-orange-bg);
+  color: var(--inventory-orange-text);
+}
+
+.customer-credit-stat-icon.red {
+  background: var(--inventory-red-bg);
+  color: var(--inventory-red-text);
+}
+
+.customer-credit-stat-card > strong {
+  display: block;
+  font-size: 23px;
+  font-weight: 750;
+  margin-top: 13px;
+  letter-spacing: -0.4px;
+  overflow-wrap: anywhere;
+}
+
+.customer-credit-stat-card > small {
+  display: block;
+  color: var(--inventory-muted);
+  font-size: 11px;
+  margin-top: 7px;
+  line-height: 1.5;
+}
+
+.customer-credit-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 15px 17px;
+  border: 1px solid var(--inventory-notice-border);
+  background: var(--inventory-notice-bg);
+  border-radius: 11px;
+}
+
+.customer-credit-notice-icon {
+  color: var(--inventory-notice-text);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.customer-credit-notice strong {
+  display: block;
+  font-size: 13px;
+  color: var(--inventory-notice-text);
+}
+
+.customer-credit-notice p {
+  margin: 5px 0 0;
+  color: var(--inventory-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.customer-credit-content {
+  background: var(--inventory-card);
+  border: 1px solid var(--inventory-border);
+  border-radius: 13px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.customer-credit-tabs {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--inventory-border);
+}
+
+.customer-credit-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 17px 2px 15px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  color: var(--inventory-muted);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.customer-credit-tabs button.active {
+  color: var(--inventory-green-text);
+  border-bottom-color: #13865c;
+}
+
+.customer-credit-tabs button span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 21px;
+  height: 21px;
+  padding: 0 5px;
+  border-radius: 6px;
+  background: var(--inventory-hover);
+  font-size: 11px;
+}
+
+.customer-credit-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  padding: 18px 20px;
+}
+
+.customer-credit-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: min(100%, 380px);
+  height: 40px;
+  padding: 0 12px;
+  color: var(--inventory-muted);
+  background: var(--inventory-input);
+  border: 1px solid var(--inventory-border);
+  border-radius: 9px;
+}
+
+.customer-credit-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--inventory-text);
+  font-size: 13px;
+}
+
+.customer-credit-search input::placeholder {
+  color: var(--inventory-muted);
+}
+
+.customer-credit-toolbar select,
+.customer-credit-request-form select,
+.customer-credit-request-form input,
+.customer-credit-request-form textarea {
+  color: var(--inventory-text);
+  background: var(--inventory-input);
+  border: 1px solid var(--inventory-border);
+  border-radius: 9px;
+  outline: none;
+  font: inherit;
+}
+
+.customer-credit-toolbar select {
+  min-width: 165px;
+  height: 40px;
+  padding: 0 11px;
+  font-size: 13px;
+}
+
+.customer-credit-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.customer-credit-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.customer-credit-table thead {
+  background: var(--inventory-table-heading);
+}
+
+.customer-credit-table th {
+  padding: 13px 16px;
+  text-align: left;
+  color: var(--inventory-muted);
+  font-size: 11px;
+  font-weight: 650;
+  border-top: 1px solid var(--inventory-border);
+  border-bottom: 1px solid var(--inventory-border);
+}
+
+.customer-credit-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid var(--inventory-border);
+  font-size: 12px;
+}
+
+.customer-credit-table tbody tr:hover {
+  background: var(--inventory-hover);
+}
+
+.customer-credit-customer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.customer-credit-customer strong {
+  color: var(--inventory-text);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.customer-credit-customer span {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.credit-outstanding {
+  font-weight: 650;
+}
+
+.credit-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.credit-status.active {
+  color: var(--inventory-green-text);
+  background: var(--inventory-green-bg);
+}
+
+.credit-status.warning {
+  color: var(--inventory-orange-text);
+  background: var(--inventory-orange-bg);
+}
+
+.credit-status.blocked {
+  color: var(--inventory-red-text);
+  background: var(--inventory-red-bg);
+}
+
+.credit-utilisation {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 105px;
+}
+
+.credit-utilisation-track {
+  width: 70px;
+  height: 6px;
+  border-radius: 20px;
+  background: var(--inventory-hover);
+  overflow: hidden;
+}
+
+.credit-utilisation-fill {
+  height: 100%;
+  background: #13865c;
+  border-radius: inherit;
+}
+
+.credit-utilisation-fill.warning {
+  background: #d97706;
+}
+
+.credit-utilisation > span {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-credit-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.customer-credit-row-actions button {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  color: var(--inventory-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.customer-credit-row-actions button:hover {
+  color: var(--inventory-green-text);
+  background: var(--inventory-hover);
+  border-color: var(--inventory-border);
+}
+
+.customer-credit-table-footer {
+  padding: 14px 20px;
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-credit-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 45px 20px;
+  color: var(--inventory-muted);
+  text-align: center;
+}
+
+.customer-credit-empty strong {
+  color: var(--inventory-text);
+  font-size: 13px;
+}
+
+.customer-credit-empty span {
+  font-size: 12px;
+}
+
+.customer-credit-requests {
+  padding: 22px;
+}
+
+.customer-credit-requests-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.customer-credit-requests-heading h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.customer-credit-requests-heading p {
+  margin: 7px 0 0;
+  color: var(--inventory-muted);
+  font-size: 12px;
+}
+
+.customer-credit-pending-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 20px;
+  color: var(--inventory-orange-text);
+  background: var(--inventory-orange-bg);
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.customer-credit-request-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.customer-credit-request-card {
+  padding: 17px;
+  border: 1px solid var(--inventory-border);
+  border-radius: 12px;
+  min-width: 0;
+}
+
+.customer-credit-request-top,
+.customer-credit-request-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.customer-credit-request-top > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.customer-credit-request-top strong {
+  font-size: 13px;
+}
+
+.customer-credit-request-top span:not(.credit-status) {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-credit-request-amounts {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 0;
+  margin-top: 14px;
+  border-top: 1px solid var(--inventory-border);
+  border-bottom: 1px solid var(--inventory-border);
+  color: var(--inventory-green-text);
+}
+
+.customer-credit-request-amounts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.customer-credit-request-amounts span {
+  color: var(--inventory-muted);
+  font-size: 10px;
+}
+
+.customer-credit-request-amounts strong {
+  color: var(--inventory-text);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.customer-credit-request-reason {
+  padding: 14px 0;
+}
+
+.customer-credit-request-reason > span {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-credit-request-reason p {
+  margin: 6px 0 0;
+  color: var(--inventory-text);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.customer-credit-request-footer {
+  align-items: center;
+  padding-top: 13px;
+  border-top: 1px solid var(--inventory-border);
+}
+
+.customer-credit-request-footer > span {
+  color: var(--inventory-muted);
+  font-size: 10px;
+}
+
+.customer-credit-request-footer > div {
+  display: flex;
+  gap: 7px;
+}
+
+.customer-credit-reject-button,
+.customer-credit-approve-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.customer-credit-reject-button {
+  color: var(--inventory-red-text);
+  background: var(--inventory-red-bg);
+  border: 1px solid transparent;
+}
+
+.customer-credit-approve-button {
+  color: #fff;
+  background: #13865c;
+  border: 1px solid #13865c;
+}
+
+.customer-credit-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(10, 20, 35, 0.55);
+  overflow-y: auto;
+}
+
+.customer-credit-modal {
+  width: min(100%, 560px);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 23px;
+  color: var(--inventory-text);
+  background: var(--inventory-card);
+  border: 1px solid var(--inventory-border);
+  border-radius: 15px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+}
+
+.customer-credit-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.customer-credit-modal-header > div > span {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-credit-modal-header h2 {
+  margin: 7px 0 5px;
+  font-size: 20px;
+}
+
+.customer-credit-modal-header p {
+  margin: 0;
+  color: var(--inventory-muted);
+  font-size: 12px;
+}
+
+.customer-credit-modal-header > button {
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  color: var(--inventory-muted);
+  background: var(--inventory-hover);
+  border: 1px solid var(--inventory-border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.customer-credit-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.customer-credit-detail-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  background: var(--inventory-hover);
+  border-radius: 10px;
+}
+
+.customer-credit-detail-grid span,
+.customer-credit-detail-contact span,
+.customer-credit-detail-utilisation span {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-credit-detail-grid strong {
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.customer-credit-detail-contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  margin-top: 10px;
+  border-bottom: 1px solid var(--inventory-border);
+}
+
+.customer-credit-detail-contact strong {
+  font-size: 12px;
+}
+
+.customer-credit-detail-utilisation {
+  padding: 17px 0;
+}
+
+.customer-credit-detail-utilisation > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.customer-credit-detail-utilisation strong {
+  font-size: 12px;
+}
+
+.customer-credit-detail-utilisation .credit-utilisation-track {
+  width: 100%;
+  height: 8px;
+}
+
+.customer-credit-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.customer-credit-request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.customer-credit-request-form .customer-credit-modal-header {
+  margin-bottom: 4px;
+}
+
+.customer-credit-request-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.customer-credit-request-form select,
+.customer-credit-request-form input,
+.customer-credit-request-form textarea {
+  width: 100%;
+  padding: 11px 12px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.customer-credit-request-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.customer-credit-request-form select:focus,
+.customer-credit-request-form input:focus,
+.customer-credit-request-form textarea:focus {
+  border-color: #13865c;
+}
+
+.customer-credit-current-limit {
+  padding: 11px 12px;
+  color: var(--inventory-muted);
+  background: var(--inventory-hover);
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.customer-credit-current-limit strong {
+  color: var(--inventory-text);
+}
+
+.customer-credit-form-error {
+  padding: 10px 12px;
+  color: var(--inventory-red-text);
+  background: var(--inventory-red-bg);
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+@media (max-width: 1200px) {
+  .customer-credit-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .customer-credit-request-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .customer-credit-header {
+    flex-direction: column;
+  }
+
+  .customer-credit-header h1 {
+    font-size: 23px;
+  }
+
+  .customer-credit-header .customer-credit-primary-button {
+    width: 100%;
+  }
+
+  .customer-credit-stats {
+    gap: 10px;
+  }
+
+  .customer-credit-stat-card {
+    padding: 14px;
+  }
+
+  .customer-credit-stat-card > strong {
+    font-size: 19px;
+  }
+
+  .customer-credit-stat-top {
+    align-items: flex-start;
+    font-size: 11px;
+  }
+
+  .customer-credit-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+  }
+
+  .customer-credit-search {
+    width: 100%;
+  }
+
+  .customer-credit-toolbar select {
+    width: 100%;
+  }
+
+  .customer-credit-tabs {
+    gap: 18px;
+    padding: 0 14px;
+  }
+
+  .customer-credit-tabs button {
+    font-size: 12px;
+  }
+
+  .customer-credit-requests {
+    padding: 15px;
+  }
+
+  .customer-credit-requests-heading {
+    flex-direction: column;
+  }
+
+  .customer-credit-request-card {
+    padding: 14px;
+  }
+
+  .customer-credit-modal {
+    padding: 18px;
+  }
+
+  .customer-credit-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .customer-credit-modal-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .customer-credit-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-credit-request-amounts {
+    gap: 9px;
+  }
+
+  .customer-credit-request-amounts strong {
+    font-size: 12px;
+  }
+
+  .customer-credit-request-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .customer-credit-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.customers-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.customers-payments-link,
+.customers-credit-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.customers-payments-link {
+  color: var(--inventory-blue-text);
+  background: var(--inventory-blue-bg);
+  border: 1px solid var(--inventory-border);
+}
+
+.customers-credit-link {
+  color: var(--inventory-green-text);
+  background: var(--inventory-green-bg);
+  border: 1px solid var(--inventory-border);
+}
+
+.customers-payments-link:hover,
+.customers-credit-link:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .customers-header-actions {
+    width: 100%;
+  }
+
+  .customers-header-actions a,
+  .customers-header-actions button {
+    flex: 1;
+  }
+}
+
+
+
+.customer-activity-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+  color: var(--inventory-text);
+}
+
+.customer-activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.customer-activity-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 13px;
+  color: var(--inventory-muted);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.customer-activity-back:hover {
+  color: var(--inventory-green-text);
+}
+
+.customer-activity-header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+
+.customer-activity-header p {
+  margin: 8px 0 0;
+  color: var(--inventory-muted);
+  font-size: 13px;
+}
+
+.customer-activity-export {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  color: var(--inventory-text);
+  background: var(--inventory-card);
+  border: 1px solid var(--inventory-border);
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.customer-activity-export:hover {
+  background: var(--inventory-hover);
+}
+
+.customer-activity-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.customer-activity-stat {
+  padding: 18px;
+  background: var(--inventory-card);
+  border: 1px solid var(--inventory-border);
+  border-radius: 13px;
+  min-width: 0;
+}
+
+.customer-activity-stat-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 13px;
+  border-radius: 10px;
+}
+
+.customer-activity-stat-icon.green {
+  color: var(--inventory-green-text);
+  background: var(--inventory-green-bg);
+}
+
+.customer-activity-stat-icon.blue {
+  color: var(--inventory-blue-text);
+  background: var(--inventory-blue-bg);
+}
+
+.customer-activity-stat-icon.orange {
+  color: var(--inventory-orange-text);
+  background: var(--inventory-orange-bg);
+}
+
+.customer-activity-stat-icon.purple {
+  color: var(--inventory-purple-text);
+  background: var(--inventory-purple-bg);
+}
+
+.customer-activity-stat > span {
+  display: block;
+  color: var(--inventory-muted);
+  font-size: 12px;
+}
+
+.customer-activity-stat > strong {
+  display: block;
+  margin-top: 9px;
+  font-size: 22px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.customer-activity-stat > small {
+  display: block;
+  margin-top: 7px;
+  color: var(--inventory-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.customer-activity-panel {
+  background: var(--inventory-card);
+  border: 1px solid var(--inventory-border);
+  border-radius: 13px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.customer-activity-panel-heading {
+  padding: 20px;
+}
+
+.customer-activity-panel-heading h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.customer-activity-panel-heading p {
+  margin: 7px 0 0;
+  color: var(--inventory-muted);
+  font-size: 12px;
+}
+
+.customer-activity-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px 18px;
+}
+
+.customer-activity-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+  min-width: 180px;
+  height: 40px;
+  padding: 0 12px;
+  color: var(--inventory-muted);
+  background: var(--inventory-input);
+  border: 1px solid var(--inventory-border);
+  border-radius: 9px;
+}
+
+.customer-activity-search input {
+  width: 100%;
+  min-width: 0;
+  color: var(--inventory-text);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 12px;
+}
+
+.customer-activity-search input::placeholder {
+  color: var(--inventory-muted);
+}
+
+.customer-activity-toolbar select {
+  height: 40px;
+  min-width: 150px;
+  padding: 0 10px;
+  color: var(--inventory-text);
+  background: var(--inventory-input);
+  border: 1px solid var(--inventory-border);
+  border-radius: 9px;
+  font-size: 12px;
+  outline: none;
+}
+
+.customer-activity-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.customer-activity-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.customer-activity-table thead {
+  background: var(--inventory-table-heading);
+}
+
+.customer-activity-table th {
+  padding: 13px 15px;
+  color: var(--inventory-muted);
+  text-align: left;
+  font-size: 11px;
+  font-weight: 650;
+  border-top: 1px solid var(--inventory-border);
+  border-bottom: 1px solid var(--inventory-border);
+}
+
+.customer-activity-table td {
+  padding: 14px 15px;
+  font-size: 12px;
+  border-bottom: 1px solid var(--inventory-border);
+}
+
+.customer-activity-table tbody tr:hover {
+  background: var(--inventory-hover);
+}
+
+.customer-activity-invoice {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.customer-activity-invoice strong {
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.customer-activity-invoice span {
+  color: var(--inventory-muted);
+  font-size: 10px;
+}
+
+.customer-activity-balance {
+  font-weight: 650;
+}
+
+.customer-activity-status {
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.customer-activity-status.paid {
+  color: var(--inventory-green-text);
+  background: var(--inventory-green-bg);
+}
+
+.customer-activity-status.partially-paid {
+  color: var(--inventory-orange-text);
+  background: var(--inventory-orange-bg);
+}
+
+.customer-activity-status.unpaid {
+  color: var(--inventory-red-text);
+  background: var(--inventory-red-bg);
+}
+
+.customer-activity-view {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  color: var(--inventory-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.customer-activity-view:hover {
+  color: var(--inventory-green-text);
+  background: var(--inventory-hover);
+  border-color: var(--inventory-border);
+}
+
+.customer-activity-footer {
+  padding: 14px 20px;
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-activity-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 20px;
+  color: var(--inventory-muted);
+  text-align: center;
+}
+
+.customer-activity-empty strong {
+  color: var(--inventory-text);
+  font-size: 13px;
+}
+
+.customer-activity-empty span {
+  font-size: 12px;
+}
+
+.customer-activity-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(10, 20, 35, 0.55);
+  overflow-y: auto;
+}
+
+.customer-activity-modal {
+  width: min(100%, 540px);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 23px;
+  color: var(--inventory-text);
+  background: var(--inventory-card);
+  border: 1px solid var(--inventory-border);
+  border-radius: 15px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+}
+
+.customer-activity-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.customer-activity-modal-header span {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-activity-modal-header h2 {
+  margin: 7px 0 5px;
+  font-size: 20px;
+}
+
+.customer-activity-modal-header p {
+  margin: 0;
+  color: var(--inventory-muted);
+  font-size: 12px;
+}
+
+.customer-activity-modal-header button {
+  display: grid;
+  place-items: center;
+  width: 33px;
+  height: 33px;
+  color: var(--inventory-muted);
+  background: var(--inventory-hover);
+  border: 1px solid var(--inventory-border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.customer-activity-items {
+  border: 1px solid var(--inventory-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.customer-activity-items-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 13px;
+  background: var(--inventory-table-heading);
+  border-bottom: 1px solid var(--inventory-border);
+}
+
+.customer-activity-items-heading strong {
+  font-size: 12px;
+}
+
+.customer-activity-items-heading span {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-activity-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px;
+  border-bottom: 1px solid var(--inventory-border);
+}
+
+.customer-activity-item:last-child {
+  border-bottom: 0;
+}
+
+.customer-activity-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.customer-activity-item strong {
+  font-size: 12px;
+}
+
+.customer-activity-item span {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-activity-total {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--inventory-border);
+}
+
+.customer-activity-total > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.customer-activity-total span {
+  color: var(--inventory-muted);
+  font-size: 12px;
+}
+
+.customer-activity-total strong {
+  font-size: 13px;
+}
+
+.customer-activity-payment-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.customer-activity-payment-info span {
+  color: var(--inventory-muted);
+  font-size: 11px;
+}
+
+.customer-activity-payment-info strong {
+  font-size: 12px;
+}
+
+.customer-activity-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.customer-activity-close {
+  padding: 10px 18px;
+  color: var(--inventory-text);
+  background: var(--inventory-hover);
+  border: 1px solid var(--inventory-border);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .customer-activity-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .customer-activity-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .customer-activity-search {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .customer-activity-header {
+    flex-direction: column;
+  }
+
+  .customer-activity-export {
+    width: 100%;
+  }
+
+  .customer-activity-header h1 {
+    font-size: 23px;
+  }
+
+  .customer-activity-stats {
+    gap: 10px;
+  }
+
+  .customer-activity-stat {
+    padding: 14px;
+  }
+
+  .customer-activity-stat > strong {
+    font-size: 19px;
+  }
+
+  .customer-activity-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 14px 15px;
+  }
+
+  .customer-activity-toolbar select {
+    width: 100%;
+  }
+
+  .customer-activity-panel-heading {
+    padding: 16px;
+  }
+
+  .customer-activity-modal {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 420px) {
+  .customer-activity-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.customer-details-history-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  color: var(--inventory-green-text);
+  background: var(--inventory-green-bg);
+  border: 1px solid var(--inventory-border);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.customer-details-history-link:hover {
+  opacity: 0.85;
+}

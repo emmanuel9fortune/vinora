@@ -18,6 +18,7 @@ import {
   ShoppingBag,
   UserRound,
   Wallet,
+  History,
 } from "lucide-react";
 import "../../styles/customers.css";
 
@@ -497,13 +498,25 @@ function CustomerDetails() {
           </div>
         </div>
 
-        <button
-          className="customer-export-button"
-          onClick={exportTransactions}
-        >
-          <Download size={16} />
-          Export History
-        </button>
+        
+        <div className="customers-header-actions">
+          <Link
+            to={`/customers/${id}/activity`}
+            className="customer-details-history-link"
+          >
+            <History size={17} />
+            Purchase History
+          </Link>
+
+          <button
+            className="customer-export-button"
+            onClick={exportTransactions}
+          >
+            <Download size={16} />
+            Export History
+          </button>
+        </div>
+
       </div>
 
       <div className="customer-profile-card">

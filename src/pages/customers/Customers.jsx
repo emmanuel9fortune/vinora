@@ -22,6 +22,7 @@ import {
   UserRound,
   Building2,
   CalendarDays,
+  ShieldCheck,
 } from "lucide-react";
 import "../../styles/customers.css";
 import { Link } from "react-router-dom";
@@ -347,15 +348,31 @@ function Customers() {
         </div>
 
         
-        <Link to="/customers/payments" className="customers-payments-link">
-          <Wallet size={17} />
-          Payments & Debts
-        </Link>
+        <div className="customers-header-actions">
+            <Link
+              to="/customers/payments"
+              className="customers-payments-link"
+            >
+              <Wallet size={17} />
+              Payments & Debts
+            </Link>
 
-        <button className="customers-primary-btn" onClick={openAddForm}>
-          <Plus size={18} />
-          Add Customer
-        </button>
+            <Link
+              to="/customers/credit"
+              className="customers-credit-link"
+            >
+              <ShieldCheck size={17} />
+              Credit Management
+            </Link>
+
+            <button
+              className="customers-primary-btn"
+              onClick={openAddForm}
+            >
+              <Plus size={17} />
+              Add Customer
+            </button>
+          </div>
 
       </div>
 

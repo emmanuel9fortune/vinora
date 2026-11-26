@@ -19,6 +19,27 @@ import SupplierDetails from "./pages/suppliers/SupplierDetails";
 import Customers from "./pages/customers/Customers";
 import CustomerDetails from "./pages/customers/CustomerDetails";
 import CustomerPayments from "./pages/customers/CustomerPayments";
+import CustomerCredit from "./pages/customers/CustomerCredit";
+import CustomerActivity from "./pages/customers/CustomerActivity";
+import POS from "./pages/pos/POS";
+import SalesHistory from "./pages/pos/SalesHistory";
+import RefundsReturns from "./pages/pos/RefundsReturns";
+import CashierShifts from "./pages/pos/CashierShifts";
+import Finance from "./pages/finance/Finance";
+import IncomeExpenses from "./pages/finance/IncomeExpenses";
+import Cashbook from "./pages/finance/Cashbook";
+import BankAccounts from "./pages/finance/BankAccounts";
+import AccountsReceivable from "./pages/finance/AccountsReceivable";
+import AccountsPayable from "./pages/finance/AccountsPayable";
+import ChartOfAccounts from "./pages/finance/ChartOfAccounts";
+import GeneralLedger from "./pages/finance/GeneralLedger";
+import Staff from "./pages/staff/Staff";
+
+
+
+
+
+
 
 // function ModulePage({ title, description }) {
 function ModulePage({ title, description }: { title: string; description: string }) {
@@ -55,15 +76,11 @@ function App() {
           <Route path="inventory/expiry" element={<ExpiryManagement />} />          
           <Route path="inventory/categories" element={<Categories />} />
 
-          <Route
-            path="pos"
-            element={
-              <ModulePage
-                title="Point of Sale"
-                description="Process sales, payments, refunds and receipts."
-              />
-            }
-          />
+          {/* POS */}
+          <Route path="pos" element={<POS />} />
+          <Route path="pos/sales-history" element={<SalesHistory />} />
+          <Route path="pos/refunds" element={<RefundsReturns />} />
+          <Route path="pos/shifts" element={<CashierShifts />} />
 
           {/* PURCHASES */}
           <Route path="purchases" element={<Purchases />} />
@@ -81,26 +98,22 @@ function App() {
           <Route path="customers" element={<Customers />} />
           <Route path="customers/:id" element={<CustomerDetails />} />
           <Route path="customers/payments" element={<CustomerPayments />} />
+          <Route path="customers/credit" element={<CustomerCredit />} />
+          <Route path="customers/:id/activity" element={<CustomerActivity />}/>
 
-          <Route
-            path="finance"
-            element={
-              <ModulePage
-                title="Finance & Accounting"
-                description="Manage accounts, expenses, journals and financial reports."
-              />
-            }
-          />
+          {/* FINANCE */}
+          <Route path="finance" element={<Finance />} />
+          <Route path="finance/income-expenses"element={<IncomeExpenses />}/>
+          <Route path="finance/cashbook" element={<Cashbook />} />
+          <Route path="finance/bank-accounts" element={<BankAccounts />} /> 
+          <Route path="finance/receivables" element={<AccountsReceivable />}/>
+          <Route path="finance/accounts-payable" element={<AccountsPayable />}/>
+          <Route path="finance/chart-of-accounts" element={<ChartOfAccounts />}/>
+          <Route path="finance/general-ledger" element={<GeneralLedger />} />
 
-          <Route
-            path="staff"
-            element={
-              <ModulePage
-                title="Staff & Permissions"
-                description="Manage employees, roles and access permissions."
-              />
-            }
-          />
+
+          <Route path="staff" element={<Staff />} />
+
 
           <Route
             path="reports"
